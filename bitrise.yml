@@ -91,7 +91,7 @@ workflows:
             sudo snyk test 
             #--all-projects
            # sudo snyk monitor
-            - content: './gradlew sonarqube '
+        - content: './gradlew sonarqube '
     after_run: []
 app:
   envs:
