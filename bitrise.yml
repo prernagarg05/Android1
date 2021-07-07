@@ -88,14 +88,10 @@ workflows:
             #!/bin/bash
             sudo npm install -g snyk
             sudo snyk auth 'da433f8e-a592-4c2d-85ea-1a1deda09a63'
-            sudo snyk test --all-projects
-            sudo snyk monitor
-    - sonarqube-scanner@1:
-        inputs:
-        - script:
-            title: SonarQube
-            inputs: null
-        - content: './gradlew sonarqube '
+            sudo snyk test 
+            #--all-projects
+           # sudo snyk monitor
+            - content: './gradlew sonarqube '
     after_run: []
 app:
   envs:
